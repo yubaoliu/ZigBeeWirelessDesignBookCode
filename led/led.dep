@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>3208358315</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\Debug\Obj\test.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\test.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\led.hex</file>
+      <file>$PROJ_DIR$\Debug\Obj\led.pbd</file>
+      <file>$PROJ_DIR$\test.c</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 3</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\led.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 1</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\test.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 0</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs>
+      <file>$PROJ_DIR$\Release\Obj\test.r51</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$TOOLKIT_DIR$\config\lnk51ew.xcl</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-nsid-1e16x01.r51</file>
+      <file>$PROJ_DIR$\Release\Obj\led.pbd</file>
+      <file>$PROJ_DIR$\test.c</file>
+      <file>$PROJ_DIR$\Release\Obj\test.pbi</file>
+      <file>$TOOLKIT_DIR$\config\lnk_base.xcl</file>
+      <file>$PROJ_DIR$\Release\Exe\led.a51</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 8</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Release\Obj\led.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 6</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\test.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 0</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 1</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Release\Exe\led.a51</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 2 7 0 3</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+</project>
+
+

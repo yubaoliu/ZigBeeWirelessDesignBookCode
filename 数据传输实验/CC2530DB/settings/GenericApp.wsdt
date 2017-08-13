@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>GenericApp/EndDeviceEB-Pro</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>202</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1035</ColumnWidth1><ColumnWidth2>276</ColumnWidth2><ColumnWidth3>69</ColumnWidth3></Build>
+      <Debug-Log/>
+    <TerminalIO/></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-14974-8740</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>GenericApp</ExpandedNode><ExpandedNode>GenericApp/App</ExpandedNode><ExpandedNode>GenericApp/Tools</ExpandedNode><ExpandedNode>GenericApp/ZMain</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-25199-8753</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-28922-9093</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericApp\Source\Enddevice.c</Filename><XPos>0</XPos><YPos>51</YPos><SelStart>2219</SelStart><SelEnd>2239</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericApp\Source\Coordinator.c</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>1194</SelStart><SelEnd>1217</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ZMain\TI2530DB\ZMain.c</Filename><XPos>0</XPos><YPos>148</YPos><SelStart>5061</SelStart><SelEnd>5078</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericApp\Source\OSAL_GenericApp.c</Filename><XPos>0</XPos><YPos>69</YPos><SelStart>3446</SelStart><SelEnd>3446</SelEnd></Tab><ActiveTab>3</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericApp\Source\GenericApp.h</Filename><XPos>0</XPos><YPos>15</YPos><SelStart>3381</SelStart><SelEnd>3381</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericApp\Source\Coordinator.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>368</SelStart><SelEnd>391</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\osal\common\OSAL.c</Filename><XPos>0</XPos><YPos>993</YPos><SelStart>26511</SelStart><SelEnd>26511</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01389110><key>iaridepm.enu1</key></Toolbar-01389110></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>749</Bottom><Right>276</Right><x>-2</x><y>-2</y><xscreen>-1664294</xscreen><yscreen>-1769522</yscreen><sizeHorzCX>-1155759721</sizeHorzCX><sizeHorzCY>-2147478154</sizeHorzCY><sizeVertCX>193056</sizeVertCX><sizeVertCY>911408</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>30</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>-1769522</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>-2147478154</sizeHorzCY><sizeVertCX>-1155759721</sizeVertCX><sizeVertCY>-2147478154</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

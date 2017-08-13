@@ -1,0 +1,490 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V7.51A/W32 for 8051               20/Aug/2012  16:04:56 /
+// Copyright 2004-2009 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr /
+//                          ojects\zstack\Samples\GenericApp\Source\Sensor.c  /
+//    Command line       =  -f "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4. /
+//                          0\Projects\zstack\Samples\GenericApp\CC2530DB\..\ /
+//                          ..\..\Tools\CC2530DB\f8wCoord.cfg" (-DCPU32MHZ    /
+//                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TR /
+//                          UE -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f   /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\P /
+//                          rojects\zstack\Samples\GenericApp\CC2530DB\..\..\ /
+//                          ..\Tools\CC2530DB\f8wConfig.cfg" (-DSECURE=0      /
+//                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                 /
+//                          -DDEFAULT_CHANLIST=0x00000800                     /
+//                          -DZDAPP_CONFIG_PAN_ID=0xFFF1                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=100             /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07, 0x09,     /
+//                          0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08,   /
+//                          0x0A, 0x0C, 0x0D}" -DMAC_MAX_FRAME_SIZE=116       /
+//                          "-DCONST=const __code" -DGENERIC=__generic        /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
+//                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
+//                          -DREJOIN_POLL_RATE=440 "C:\Texas                  /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\Source\Sensor.c" -D       /
+//                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D             /
+//                          MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -lC "C:\Texas  /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\CoordinatorEB\Li /
+//                          st\" -lA "C:\Texas Instruments\ZStack-CC2530-2.3. /
+//                          0-1.4.0\Projects\zstack\Samples\GenericApp\CC2530 /
+//                          DB\CoordinatorEB\List\" --diag_suppress           /
+//                          Pe001,Pa010 -o "C:\Texas                          /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\CoordinatorEB\Ob /
+//                          j\" -e --require_prototypes --debug --core=plain  /
+//                          --dptr=16,1 --data_model=large                    /
+//                          --code_model=banked --calling_convention=xdata_re /
+//                          entrant --place_constants=data_rom                /
+//                          --nr_virtual_regs 16 -I "C:\Texas                 /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\" -I "C:\Texas   /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\SOURCE\" -I   /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\P /
+//                          rojects\zstack\Samples\GenericApp\CC2530DB\..\..\ /
+//                          ..\ZMAIN\TI2530DB\" -I "C:\Texas                  /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\MT\" -I "C:\Texas                       /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\HAL\INCLUDE\" -I "C:\Texas              /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\HAL\TARGET\CC2530EB\" -I "C:\Texas      /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\OSAL\MCU\CCSOC\" -I "C:\Texas           /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\OSAL\INCLUDE\" -I "C:\Texas             /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\STACK\AF\" -I "C:\Texas                 /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\STACK\NWK\" -I "C:\Texas                /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\STACK\SEC\" -I "C:\Texas                /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\STACK\SAPI\" -I "C:\Texas               /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\STACK\SYS\" -I "C:\Texas                /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\STACK\ZDO\" -I "C:\Texas                /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\ZMAC\F8W\" -I "C:\Texas                 /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\ZMAC\" -I "C:\Texas                     /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\SERVICES\SADDR\" -I "C:\Texas           /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\SERVICES\SDATA\" -I "C:\Texas           /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\MAC\INCLUDE\" -I "C:\Texas              /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\MAC\HIGH_LEVEL\" -I "C:\Texas           /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\MAC\LOW_LEVEL\srf04\" -I "C:\Texas      /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
+//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
+//                          OMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\" -I    /
+//                          "C:\Program Files\IAR Systems\Embedded Workbench  /
+//                          5.3 Evaluation version\8051\INC\" -I "C:\Program  /
+//                          Files\IAR Systems\Embedded Workbench 5.3          /
+//                          Evaluation version\8051\INC\CLIB\" -Ohz           /
+//    List file          =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr /
+//                          ojects\zstack\Samples\GenericApp\CC2530DB\Coordin /
+//                          atorEB\List\Sensor.s51                            /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME Sensor
+
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?BANKED_ENTER_XDATA
+        EXTERN ?BANKED_LEAVE_XDATA
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+        EXTERN ?US_SHR
+        EXTERN ?V0
+        EXTERN __INIT_XDATA_I
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC ??getVddvalue?relay
+        FUNCTION ??getVddvalue?relay,0203H
+        PUBLIC ??readTemp?relay
+        FUNCTION ??readTemp?relay,0203H
+        PUBWEAK ADCCON3
+        PUBWEAK ADCH
+        PUBWEAK ADCL
+        PUBWEAK _A_TCON
+        PUBLIC getVddvalue
+        FUNCTION getVddvalue,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC readTemp
+        FUNCTION readTemp,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA_SP SP IDATA
+        CFI StackFrame CFA_PSP16 PSP16 XDATA
+        CFI StackFrame CFA_XSP16 XSP16 XDATA
+        CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+        CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+        CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+        CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+        CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+        CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+        CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+        CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+        CFI Resource V8:8, V9:8, V10:8, V11:8, V12:8, V13:8, V14:8, V15:8, SP:8
+        CFI Resource PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+        CFI VirtualResource ?RET:24
+        CFI Resource ?BRET_EXT:8
+        CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+        CFI ResourceParts PSP16 PSPH, PSPL
+        CFI ResourceParts XSP16 XSPH, XSPL
+        CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-3
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B Undefined
+        CFI A Undefined
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 Undefined
+        CFI R5 Undefined
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI V8 SameValue
+        CFI V9 SameValue
+        CFI V10 SameValue
+        CFI V11 SameValue
+        CFI V12 SameValue
+        CFI V13 SameValue
+        CFI V14 SameValue
+        CFI V15 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT Frame(CFA_SP, 3)
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon0
+        
+getVddvalue         SYMBOL "getVddvalue"
+??getVddvalue?relay SYMBOL "?relay", getVddvalue
+readTemp            SYMBOL "readTemp"
+??readTemp?relay    SYMBOL "?relay", readTemp
+
+// C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericApp\Source\Sensor.c
+//    1 #include "Sensor.h"
+//    2 #include <ioCC2530.h>
+
+        ASEGN SFR_AN:DATA:NOROOT,088H
+// union <unnamed> volatile __sfr _A_TCON
+_A_TCON:
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0b6H
+// unsigned char volatile __sfr ADCCON3
+ADCCON3:
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0baH
+// unsigned char volatile __sfr ADCL
+ADCL:
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0bbH
+// unsigned char volatile __sfr ADCH
+ADCH:
+        DS 1
+//    3 
+//    4 #define ADC_REF_115V 0x00
+//    5 #define ADC_DEC_256  0x20
+//    6 #define ADC_CHN_TEMP 0x0e
+//    7 #define ADC_DEC_064 0x00
+//    8 #define ADC_CHN_VDD3 0x0f
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//    9 int8 readTemp(void)
+readTemp:
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI Function readTemp
+//   10 {
+        MOV     A,#-0xa
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 10)
+        ; Saved register size: 10
+        ; Auto size: 0
+//   11     static uint16 reference_voltage;
+//   12     static uint8 bCalibrate=TRUE;
+//   13     uint16 value;
+//   14     int8 temp;
+//   15     
+//   16     ATEST=0x01;
+        MOV     A,#0x1
+        MOV     DPTR,#0x61bd
+        MOVX    @DPTR,A
+//   17     TR0|=0x01;
+        MOV     DPTR,#0x624b
+        MOVX    A,@DPTR
+        SETB    0xE0 /* A   */.0
+        MOVX    @DPTR,A
+//   18     ADCIF=0;
+        CLR     0x88.5
+//   19     ADCCON3=(ADC_REF_115V|ADC_DEC_256|ADC_CHN_TEMP);
+        MOV     0xb6,#0x2e
+//   20     while(!ADCIF);
+??readTemp_0:
+        MOV     C,0x88.5
+        JNC     ??readTemp_0
+//   21 	ADCIF=0;
+        CLR     0x88.5
+//   22 	value=ADCL;
+        MOV     R2,0xba
+        MOV     DPL,R2
+        MOV     R0,DPL
+//   23 	value|=((uint16)ADCH)<<8;
+        MOV     A,0xbb
+        MOV     R1,A
+//   24 	value>>=4;
+        MOV     ?V0 + 0,R0
+        MOV     ?V0 + 1,R1
+        MOV     A,#0x4
+        MOV     R0,#?V0 + 0
+        LCALL   ?US_SHR
+        MOV     R0,?V0 + 0
+        MOV     R1,?V0 + 1
+//   25 	if(bCalibrate)
+        MOV     DPTR,#??bCalibrate
+        MOVX    A,@DPTR
+        JZ      ??readTemp_1
+//   26 		{
+//   27 			reference_voltage=value;
+        MOV     DPTR,#??reference_voltage
+        MOV     A,R0
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,R1
+        MOVX    @DPTR,A
+//   28 			bCalibrate=FALSE;
+        CLR     A
+        MOV     DPTR,#??bCalibrate
+        MOVX    @DPTR,A
+//   29 		}
+//   30 	temp=22+((value-reference_voltage)/4);
+//   31 	return temp;
+??readTemp_1:
+        MOV     DPTR,#??reference_voltage
+        MOVX    A,@DPTR
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R3,A
+        MOV     A,R0
+        CLR     C
+        SUBB    A,R2
+        MOV     ?V0 + 0,A
+        MOV     A,R1
+        SUBB    A,R3
+        MOV     ?V0 + 1,A
+        MOV     A,#0x2
+        MOV     R0,#?V0 + 0
+        LCALL   ?US_SHR
+        MOV     A,?V0 + 0
+        ADD     A,#0x16
+        MOV     R1,A
+        MOV     R7,#0x2
+        LJMP    ?BANKED_LEAVE_XDATA
+        CFI EndBlock cfiBlock0
+        REQUIRE _A_TCON
+        REQUIRE ADCCON3
+        REQUIRE ADCL
+        REQUIRE ADCH
+//   32     
+//   33 }
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+??reference_voltage:
+        DS 2
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+        DATA
+??bCalibrate:
+        DS 1
+        REQUIRE `?<Initializer for bCalibrate>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   34 unsigned int getVddvalue(void)
+getVddvalue:
+        CFI Block cfiBlock1 Using cfiCommon0
+        CFI Function getVddvalue
+//   35 {
+        ; Saved register size: 2
+        ; Auto size: 0
+//   36   unsigned int value;
+//   37   unsigned char tmpADCCON3=ADCCON3;
+        MOV     A,0xb6
+        MOV     R4,A
+//   38   
+//   39   ADCIF=0;
+        CLR     0x88.5
+//   40   ADCCON3=(ADC_REF_115V|ADC_DEC_064|ADC_CHN_VDD3);
+        MOV     0xb6,#0xf
+//   41   while(!ADCIF);
+??getVddvalue_0:
+        MOV     C,0x88.5
+        JNC     ??getVddvalue_0
+//   42   
+//   43   value=ADCH;
+        MOV     R2,0xbb
+        MOV     R3,#0x0
+//   44   ADCCON3=tmpADCCON3;
+        MOV     0xb6,R4
+//   45   return (value);
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock1
+        REQUIRE _A_TCON
+        REQUIRE ADCCON3
+        REQUIRE ADCH
+//   46 }
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+        DATA
+`?<Initializer for bCalibrate>`:
+        DB 1
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??readTemp?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    readTemp
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??getVddvalue?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    getVddvalue
+
+        END
+// 
+// 127 bytes in segment BANKED_CODE
+//  12 bytes in segment BANK_RELAYS
+//   4 bytes in segment SFR_AN
+//   1 byte  in segment XDATA_I
+//   1 byte  in segment XDATA_ID
+//   2 bytes in segment XDATA_Z
+// 
+// 140 bytes of CODE  memory
+//   0 bytes of DATA  memory (+ 4 bytes shared)
+//   3 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: none

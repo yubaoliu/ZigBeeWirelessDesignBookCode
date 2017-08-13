@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>218722901</fileChecksum>
+  <configuration>
+    <name>CoordinatorEB</name>
+    <outputs>
+      <file>$PROJ_DIR$\CoordinatorEB\Exe\GenericApp.hex</file>
+      <file>$PROJ_DIR$\CoordinatorEB\Obj\OnBoard.pbi</file>
+      <file>$PROJ_DIR$\CoordinatorEB\Obj\OnBoard.r51</file>
+      <file>$PROJ_DIR$\CoordinatorEB\Obj\OSAL_GenericApp.pbi</file>
+      <file>$PROJ_DIR$\CoordinatorEB\Obj\Coordinator.r51</file>
+      <file>$PROJ_DIR$\CoordinatorEB\Obj\ZMain.pbi</file>
+      <file>$PROJ_DIR$\CoordinatorEB\Obj\ZMain.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
+      <file>$PROJ_DIR$\CoordinatorEB\Obj\Coordinator.pbi</file>
+      <file>$PROJ_DIR$\CoordinatorEB\Obj\OSAL_GenericApp.r51</file>
+      <file>$PROJ_DIR$\CoordinatorEB\Obj\chipcon_cstartup.r51</file>
+      <file>$PROJ_DIR$\CoordinatorEB\Obj\GenericApp.pbd</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wCoord.cfg</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wEndev.cfg</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wRouter.cfg</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\chipcon_cstartup.s51</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.c</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.h</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</file>
+      <file>$PROJ_DIR$\..\Source\GenericApp.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$PROJ_DIR$\..\Source\Coordinator.c</file>
+      <file>$PROJ_DIR$\..\Source\Enddevice.c</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wConfig.cfg</file>
+      <file>$PROJ_DIR$\..\Source\OSAL_GenericApp.c</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8w2530.xcl</file>
+      <file>$PROJ_DIR$\..\Source\Coordinator.h</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 0</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\CoordinatorEB\Obj\GenericApp.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 8 3 1 5</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\chipcon_cstartup.s51</name>
+      <outputs>
+        <tool>
+          <name>A8051</name>
+          <file> 10</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 2</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 6</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Source\Coordinator.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7 20 26</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Source\OSAL_GenericApp.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 9</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 3</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19</file>
+        </tool>
+      </inputs>
+    </file>
+    <forcedrebuild>
+      <name>[REBUILD_ALL]</name>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>CoordinatorEB-Pro</name>
+    <outputs>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Obj\Enddevice.pbi</file>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Exe\GenericApp.d51</file>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Obj\ZMain.r51</file>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Obj\OSAL_GenericApp.r51</file>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Obj\OnBoard.pbi</file>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Obj\ZMain.pbi</file>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Obj\Coordinator.pbi</file>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Obj\OSAL_GenericApp.pbi</file>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Obj\GenericApp.pbd</file>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Obj\chipcon_cstartup.r51</file>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Obj\OnBoard.r51</file>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Obj\Enddevice.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
+      <file>$PROJ_DIR$\CoordinatorEB-Pro\Obj\Coordinator.r51</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wCoord.cfg</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wEndev.cfg</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wRouter.cfg</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\chipcon_cstartup.s51</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.c</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.h</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</file>
+      <file>$PROJ_DIR$\..\Source\GenericApp.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$PROJ_DIR$\..\Source\Coordinator.c</file>
+      <file>$PROJ_DIR$\..\Source\Enddevice.c</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wConfig.cfg</file>
+      <file>$PROJ_DIR$\..\Source\OSAL_GenericApp.c</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8w2530.xcl</file>
+      <file>$PROJ_DIR$\..\Source\Coordinator.h</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\CoordinatorEB-Pro\Obj\GenericApp.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 6 0 7 4 5</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\chipcon_cstartup.s51</name>
+      <outputs>
+        <tool>
+          <name>A8051</name>
+          <file> 9</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 10</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 2</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Source\Coordinator.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 13</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 12 22 28</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Source\Enddevice.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 0</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 12 22 28</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Source\OSAL_GenericApp.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>EndDeviceEB</name>
+    <outputs>
+      <file>$PROJ_DIR$\EndDeviceEB\Obj\Enddevice.r51</file>
+      <file>$PROJ_DIR$\EndDeviceEB\Obj\ZMain.r51</file>
+      <file>$PROJ_DIR$\EndDeviceEB\Obj\OnBoard.r51</file>
+      <file>$PROJ_DIR$\EndDeviceEB\Obj\OSAL_GenericApp.pbi</file>
+      <file>$PROJ_DIR$\EndDeviceEB\Obj\OnBoard.pbi</file>
+      <file>$PROJ_DIR$\EndDeviceEB\Obj\ZMain.pbi</file>
+      <file>$PROJ_DIR$\EndDeviceEB\Exe\GenericApp.d51</file>
+      <file>$PROJ_DIR$\EndDeviceEB\Obj\GenericApp.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wCoord.cfg</file>
+      <file>$PROJ_DIR$\EndDeviceEB\Obj\OSAL_GenericApp.r51</file>
+      <file>$PROJ_DIR$\EndDeviceEB\Obj\Enddevice.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wEndev.cfg</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wRouter.cfg</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\chipcon_cstartup.s51</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.c</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.h</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</file>
+      <file>$PROJ_DIR$\EndDeviceEB\Obj\chipcon_cstartup.r51</file>
+      <file>$PROJ_DIR$\..\Source\GenericApp.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$PROJ_DIR$\..\Source\Coordinator.c</file>
+      <file>$PROJ_DIR$\..\Source\Enddevice.c</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wConfig.cfg</file>
+      <file>$PROJ_DIR$\..\Source\OSAL_GenericApp.c</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8w2530.xcl</file>
+      <file>$PROJ_DIR$\..\Source\Coordinator.h</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\EndDeviceEB\Obj\GenericApp.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 11 3 4 5</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\chipcon_cstartup.s51</name>
+      <outputs>
+        <tool>
+          <name>A8051</name>
+          <file> 18</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 2</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 1</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Source\Enddevice.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 0</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8 20 26</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Source\OSAL_GenericApp.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 10</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 3</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19</file>
+        </tool>
+      </inputs>
+    </file>
+    <forcedrebuild>
+      <name>[REBUILD_ALL]</name>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>EndDeviceEB-Pro</name>
+    <outputs>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Exe\GenericApp.d51</file>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Obj\chipcon_cstartup.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Obj\GenericApp.pbd</file>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Obj\OnBoard.r51</file>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Obj\ZMain.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wCoord.cfg</file>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Obj\Coordinator.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wEndev.cfg</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wRouter.cfg</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\chipcon_cstartup.s51</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.c</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.h</file>
+      <file>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</file>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Obj\OnBoard.pbi</file>
+      <file>$PROJ_DIR$\..\Source\GenericApp.h</file>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Obj\ZMain.r51</file>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Obj\Coordinator.r51</file>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Obj\Enddevice.r51</file>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Obj\Enddevice.pbi</file>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Obj\OSAL_GenericApp.pbi</file>
+      <file>$PROJ_DIR$\EndDeviceEB-Pro\Obj\OSAL_GenericApp.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$PROJ_DIR$\..\Source\Coordinator.c</file>
+      <file>$PROJ_DIR$\..\Source\Enddevice.c</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8wConfig.cfg</file>
+      <file>$PROJ_DIR$\..\Source\OSAL_GenericApp.c</file>
+      <file>$PROJ_DIR$\..\..\..\Tools\CC2530DB\f8w2530.xcl</file>
+      <file>$PROJ_DIR$\..\Source\Coordinator.h</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 0</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\EndDeviceEB-Pro\Obj\GenericApp.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 7 19 20 14 5</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\chipcon_cstartup.s51</name>
+      <outputs>
+        <tool>
+          <name>A8051</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 16</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Source\Coordinator.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 17</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2 22 28</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Source\Enddevice.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 18</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2 22 28</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Source\OSAL_GenericApp.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 21</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 15</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>RouterEB</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[REBUILD_ALL]</name>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>RouterEB-Pro</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
